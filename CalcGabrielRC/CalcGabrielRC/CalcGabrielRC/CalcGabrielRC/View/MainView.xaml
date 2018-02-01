@@ -1,0 +1,272 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CalcGabrielRC.View.MainView"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}"
+             Title="CALCULADORA"
+             >
+    <ContentPage.Content>
+
+        <Grid>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Label
+            x:Name="ResultText"
+            FontSize="58"
+            Grid.ColumnSpan="4"   
+            TextColor="White"
+            BackgroundColor="Black"
+            VerticalTextAlignment="Center"
+            HorizontalTextAlignment="Center"
+            IsEnabled="False"
+            Text="{Binding Visor}"
+            />
+            <Button
+            Grid.Row="1"
+            Grid.Column="0"
+            FontAttributes="Bold"
+            TextColor="Black"
+            BackgroundColor="White"
+            FontSize="Large"
+            Text="7"
+            VerticalOptions="FillAndExpand"
+            Command="{Binding InsereNumeroCommand}"
+            x:Name="b7"
+            CommandParameter="{Binding Source={x:Reference b7}, Path=Text}"
+            />
+            <Button
+            Grid.Row="1"
+            Grid.Column="1"
+            FontAttributes="Bold"
+            FontSize="Large"
+            TextColor="Black"
+            BackgroundColor="White"
+            Text="8"
+            VerticalOptions="FillAndExpand"
+            Command="{Binding InsereNumeroCommand}"
+            x:Name="b8"
+            CommandParameter="{Binding Source={x:Reference b8}, Path=Text}"
+            />
+            <Button
+            Grid.Row="1"
+            Grid.Column="2"
+            FontAttributes="Bold"
+            FontSize="Large"
+            TextColor="Black"
+            BackgroundColor="White"
+            Text="9"
+            VerticalOptions="FillAndExpand"
+            Command="{Binding InsereNumeroCommand}"
+            x:Name="b9"
+            CommandParameter="{Binding Source={x:Reference b9}, Path=Text}"
+           
+            />
+            <Button
+            Grid.Row="1"
+            Grid.Column="3"
+            BackgroundColor="Orange"
+            FontAttributes="Bold"
+            FontSize="Large"
+            TextColor="Black"
+            Text="/"
+            VerticalOptions="FillAndExpand"
+            x:Name="oDivisao"
+            Command="{Binding InsereOperacaoCommand}"
+            CommandParameter="{Binding Source={x:Reference oDivisao}, Path=Text}"
+           
+            />
+            <Button
+            Grid.Row="2"
+            Grid.Column="0"
+            FontAttributes="Bold"
+            FontSize="Large"
+            TextColor="Black"
+            BackgroundColor="White"
+            Text="4"
+            VerticalOptions="FillAndExpand"
+            Command="{Binding InsereNumeroCommand}"
+            x:Name="b4"
+            CommandParameter="{Binding Source={x:Reference b4}, Path=Text}"
+           
+            />
+            <Button
+            Grid.Row="2"
+            Grid.Column="1"
+            FontAttributes="Bold"
+            FontSize="Large"
+            TextColor="Black"
+            BackgroundColor="White"
+            Text="5"
+            VerticalOptions="FillAndExpand"
+            Command="{Binding InsereNumeroCommand}"
+             x:Name="b5"
+            CommandParameter="{Binding Source={x:Reference b5}, Path=Text}"
+            
+            />
+            <Button
+            Grid.Row="2"
+            Grid.Column="2"
+            FontAttributes="Bold"
+            FontSize="Large"
+            TextColor="Black"
+            BackgroundColor="White"
+            Text="6"
+            VerticalOptions="FillAndExpand"
+            Command="{Binding InsereNumeroCommand}"
+            x:Name="b6"
+            CommandParameter="{Binding Source={x:Reference b6}, Path=Text}"
+          
+            />
+            <Button
+            Grid.Row="2"
+            Grid.Column="3"
+            BackgroundColor="Orange"
+            FontAttributes="Bold"
+            FontSize="Large"
+            TextColor="Black"
+            Text="*"
+            VerticalOptions="FillAndExpand"
+            x:Name="oMultiplicacao"
+            Command="{Binding InsereOperacaoCommand}"
+            CommandParameter="{Binding Source={x:Reference oMultiplicacao}, Path=Text}"
+          
+            />
+            <Button
+            Grid.Row="3"
+            Grid.Column="0"
+            FontAttributes="Bold"
+            FontSize="Large"
+            TextColor="Black"
+            BackgroundColor="White"
+            Text="1"
+            VerticalOptions="FillAndExpand"
+            Command="{Binding InsereNumeroCommand}"
+            x:Name="b1"
+            CommandParameter="{Binding Source={x:Reference b1}, Path=Text}"
+            />
+            <Button
+            Grid.Row="3"
+            Grid.Column="1"
+            FontAttributes="Bold"
+            FontSize="Large"
+            TextColor="Black"
+            BackgroundColor="White"
+            Text="2"
+            VerticalOptions="FillAndExpand"
+            Command="{Binding InsereNumeroCommand}"
+            x:Name="b2"
+            CommandParameter="{Binding Source={x:Reference b2}, Path=Text}"
+            />
+            <Button
+            Grid.Row="3"
+            Grid.Column="2"
+            FontAttributes="Bold"
+            FontSize="Large"
+            TextColor="Black"
+            BackgroundColor="White"
+            Text="3"
+            VerticalOptions="FillAndExpand"
+            Command="{Binding InsereNumeroCommand}"
+            x:Name="b3"
+            CommandParameter="{Binding Source={x:Reference b3}, Path=Text}"
+            />
+            <Button
+            Grid.Row="3"
+            Grid.Column="3"
+            BackgroundColor="Orange"
+            FontAttributes="Bold"
+            FontSize="Large"
+            TextColor="Black"
+            Text="-"
+            VerticalOptions="FillAndExpand"
+            x:Name="oSubtracao"
+            Command="{Binding InsereOperacaoCommand}"
+            CommandParameter="{Binding Source={x:Reference oSubtracao}, Path=Text}"
+           
+          
+            />
+            <Button
+            Grid.Row="4"
+            Grid.Column="0"
+            Grid.ColumnSpan="3"
+            FontAttributes="Bold"
+            FontSize="Large"
+            TextColor="Black"
+            BackgroundColor="White"
+            Text="0"
+            VerticalOptions="FillAndExpand"
+            Command="{Binding InsereNumeroCommand}"
+            x:Name="b0"
+            CommandParameter="{Binding Source={x:Reference b0}, Path=Text}"
+            
+            />
+            <Button
+            Grid.Row="4"
+            Grid.Column="3"
+            BackgroundColor="Orange"
+            FontAttributes="Bold"
+            FontSize="Large"
+            TextColor="Black"
+            Text="+"
+            VerticalOptions="FillAndExpand"
+            x:Name="oSoma"
+            Command="{Binding InsereOperacaoCommand}"
+            CommandParameter="{Binding Source={x:Reference oSoma}, Path=Text}"
+           
+            />
+            <Button
+            Grid.Row="5"
+            Grid.Column="0"
+            FontAttributes="Bold"
+            FontSize="Large"
+            TextColor="White"
+            BackgroundColor="#808080"
+            Text="C"
+            VerticalOptions="FillAndExpand"
+            Command="{Binding LimpaTudoCommand}"
+       
+            />
+            <Button
+            Grid.Row="5"
+            BackgroundColor="Orange"
+            Grid.Column="1"
+            Grid.ColumnSpan="3"
+            FontAttributes="Bold"
+            FontSize="Large"
+            TextColor="Black"
+            Text="="
+            VerticalOptions="FillAndExpand"
+            Command="{Binding RealizaOperacaoCommand}"
+           
+            />
+            <Image
+                Grid.Row="6"
+                Grid.Column="0"
+                Grid.ColumnSpan="4"
+                Source="Image.png"
+                BackgroundColor="Silver"
+           
+                />
+
+
+
+
+
+        </Grid>
+
+    </ContentPage.Content>
+</ContentPage>
